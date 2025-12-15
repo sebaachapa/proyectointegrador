@@ -11,16 +11,62 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @font-face {
     font-family: "bit" ;
     src: url(8-BIT\ WONDER.TTF);
 }
 
+@font-face{
+    font-family: "arcade";
+    src: url(ARCADE_N.TTF)
+}
+
+@font-face{
+    font-family: "retrotech";
+    src: url(RETROTECH.ttf)
+}
+
+/* Make any h7 elements white */
+h7 {
+    color: #ffffff !important;
+    font-family: retrotech !important;
+}
 
 /* --------------------------------------------------------------------------------------------------------------- */
 /* Media queries */
+/* ---------------------------CELULARES--------------------------------------- */
+@media (max-width: 500px) {
 
-@media (max-width: 768px) {
+html{
+    overflow-x: hidden !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+header{
+        width: 100% !important;
+        overflow-x: hidden !important;
+        display: inline-block   !important;
+    }
+
+.logo{padding-right: 0;
+    text-decoration: none !important;
+    h7{
+        color: white;
+    }
+        }
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
 
     .container{
         width: 100%;
@@ -35,19 +81,195 @@
         padding: 0;
     }
     
-    .gridlomejor{
+    ul li a{
+        font-size: 10px !important;
+    }
+
+    .container .gridlomejor{
+        grid-template-columns: 1fr !important;
+        column-gap: 0 !important;
+        display: block !important;
+
+    }
+
+
+    }
+
+        
+
+/* ---------------------------TABLETS--------------------------------------- */
+@media (max-width: 768px) {
+
+
+.logo{padding-right: 0;}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+    .container{
+        width: 100%;
+}
+    ul{
+        width: 100%;
+        font-size: 10px;
+        
+    }
+    
+    li{
+        padding: 0;
+    }
+    
+/*     .gridlomejor{
         width: 100%;
         display: grid;
         grid-template-columns: auto ;
-        grid-template-rows: auto;
+        grid-template-rows: auto; */
+    .container .gridlomejor{
+        grid-template-columns: 1fr 1fr !important;
+        column-gap: 1 !important;
+
+    }
+
+/*     .lomejorgm{
+        padding-right: 0 !important;
+
+    } */
+    .enviosypagos .texteyp{
+        h2{font-size: 9px !important;}
+        padding-left: 1px !important;
+    }
+    .enviostext{
+        padding-left: 0px !important;
+    }
+    .tipopagotext{
+        padding-left: 0px !important;}
+    
+    .pagosegurotext{
+        padding-left: 0px !important;
+    }
+
+    .bannershome .row{
+    display: inline-block !important;}
+
+    .footsocials{
+        gap:20px !important;
+
+        li{
+            font-size: 15px !important;
+        }
+    }
+
+    .gridlomejor{
+        align-items: center !important;
+        padding-left: 50px !important;
+        justify-content: center !important;
+
+    }
         
 }
+
+@media (max-width: 820px){
+    html body{
+        
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header{
+        width: 100% !important;
+        overflow-x: hidden !important;
+        display: inline-block   !important;
+    }
+
+    .lomejorgm{
+        display: grid !important;
+        /* grid-template-columns: auto auto !important; */
+        width: 100% !important ;
+        text-align: center !important;
+        padding-right: 0px !important;
+
+    }
+
+    .gridlomejor{
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+
+
 }
+
+@media (max-width: 1024px){
+    .gridlomejor{
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+
+
+html{
+    height: 100%;
+}
+
+html body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/*   .enviosypagos .texteyp{
+        h2{font-size: 9px !important;}
+        padding-left: 1px !important;
+    }
+    .enviostext{
+        padding-left: 0px !important;
+    }
+    .tipopagotext{
+        padding-left: 0px !important;}
+    
+    .pagosegurotext{
+        padding-left: 0px !important;
+    }
+
+    .bannershome .row{
+    display: inline-block !important;}
+
+    .footsocials{
+        gap:20px !important;
+
+        li{
+            font-size: 15px !important;
+        }
+    }
+
+    .gridlomejor{
+        align-items: center !important;
+        padding-left: 50px !important;
+        justify-content: center !important;
+
+    } */
+
 
 
 
 /* --------------------------------------------HEADER---------------------------------------------------------------------------- */
-
+header {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
 
 .logo{
     padding: 30px;
@@ -94,7 +316,9 @@ nav{
     
         text-align: center;
         text-decoration: none;
-        font-family: bit;
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 200;
+        font-weight: normal;
         font-style:normal;
         color: black;
         vertical-align: middle;
@@ -122,6 +346,8 @@ nav{
 body{
     background: black;
     height: auto;
+    width: 100%;
+    margin: 0px;
     
 }
 
@@ -129,7 +355,8 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
-    display: block;
+    display: grid;
+    align-items: start;
 
 
 /* ---------------------------------------------TEXTO LO MEJOR DE GAMING STORE-------------------------------------------------------------------- */
@@ -152,6 +379,8 @@ body{
         column-gap: 50px;
         padding-top: 100px;
         padding-bottom: 100px;
+        box-sizing: border-box;
+        align-items: start;
             img{
                 width: 200px;
                 box-shadow: 6px 5px rgba(255, 255, 255, 0.2);
@@ -224,6 +453,8 @@ body{
 
     }
 
+
+
 .bannershome .row{
     display: flex;
     gap: 150px;    
@@ -254,6 +485,7 @@ body{
     justify-content: space-around;
     gap: 200px;
     font-family: "Montserrat", sans-serif;
+    margin-top: auto;
     
 
     .categorias{
@@ -292,6 +524,7 @@ body{
     box-sizing: border-box;
     height: auto;
     font-family:"Montserrat", sans-serif;
+    padding-bottom: 400px;
 
     .aside-categorias{
         background: #f5f5f5;
@@ -419,7 +652,8 @@ body{
     align-items: start;
     max-width: 1200px;
     margin: 0 auto;
-    font-family: "Montserrat", sans-serif
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 100px;
 }
 
 
@@ -474,3 +708,486 @@ body{
     .form-actions{ text-align: center; }
 }
 
+
+
+
+/* From Uiverse.io by ilkhoeri */ 
+    .card {
+    padding: 1rem;
+    overflow: hidden;
+    border: 1px solid #c5c5c5;
+    border-radius: 12px;
+    background-color: #d9d9d92f;
+    backdrop-filter: blur(8px);
+    min-width: 344px;
+    }
+    .wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+    border: 0.5px solid #525252;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+    .terminal {
+    display: flex;
+    flex-direction: column;
+
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    }
+    .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    min-height: 40px;
+    padding-inline: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #202425;
+    }
+    .title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 2.5rem;
+    user-select: none;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #8e8e8e;
+    }
+    .title > svg {
+    height: 18px;
+    width: 18px;
+    margin-top: 2px;
+    color: #006adc;
+    }
+    .copy_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border: 0.65px solid #c1c2c5;
+    margin-left: auto;
+    border-radius: 6px;
+    background-color: #202425;
+    color: #8e8e8e;
+    cursor: pointer;
+    }
+    .copy_toggle > svg {
+    width: 20px;
+    height: 20px;
+    }
+    .copy_toggle:active > svg > path,
+    .copy_toggle:focus-within > svg > path {
+    animation: clipboard-check 500ms linear forwards;
+    }
+    .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow-x: auto;
+    padding: 1rem;
+    line-height: 19px;
+    color: white;
+    background-color: black;
+    white-space: nowrap;
+    }
+    .pre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-wrap: nowrap;
+    white-space: pre;
+    background-color: transparent;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 16px;
+    }
+    .pre code:nth-child(1) {
+    color: #575757;
+    }
+    .pre code:nth-child(2) {
+    color: #e34ba9;
+    }
+    .cmd {
+    height: 19px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    }
+    .cmd::before {
+    content: attr(data-cmd);
+    position: relative;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    animation: inputs 8s steps(22) infinite;
+    }
+    .cmd::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    border-right: 0.15em solid #e34ba9;
+    animation: cursor 0.5s step-end infinite alternate, blinking 0.5s infinite;
+    }
+
+    @keyframes blinking {
+    20%,
+    80% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0);
+    }
+    }
+    @keyframes cursor {
+    50% {
+        border-right-color: transparent;
+    }
+    }
+    @keyframes inputs {
+    0%,
+    100% {
+        width: 0;
+    }
+    10%,
+    90% {
+        width: 58px;
+    }
+    30%,
+    70% {
+        width: 215px;
+        max-width: max-content;
+    }
+    }
+    @keyframes clipboard-check {
+    100% {
+        color: #fff;
+        d: path(
+        "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
+        );
+    }
+    }
+
+
+/* -------------------------------------------- CARRITO-------------------------------------------------------------------------------------- */
+
+.containercarrito{
+    background-color: white;
+    font-family: retroarchive, sans-serif;
+    flex: 1;
+}            
+
+
+.micarrito {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.micarrito h2 {
+    font-family: "Press Start 2P", system-ui;
+    text-transform: uppercase;
+}
+
+
+.micarrito table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.micarrito table thead {
+    background-color: #333;
+    color: white;
+}
+
+.micarrito table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+.micarrito table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.micarrito table tbody tr {
+    transition: background-color 0.3s;
+}
+
+.micarrito table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.micarrito table img {
+    border-radius: 5px;
+}
+
+.micarrito button.eliminar {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.micarrito button.eliminar:hover {
+    background-color: #cc0000;
+}
+
+#contador-carrito {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.carrito-total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top: 2px solid #ddd;
+}
+
+.btn-iniciar-compra {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    background-color: #fbee50;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Press Start 2P", system-ui;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-iniciar-compra:hover {
+    background-color: #f5e74c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-iniciar-compra:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+/* -------------------------------------------- Media -------------------------------------------------------------------------------------- */
+
+@media (max-width: 480px) {
+    .micarrito {
+        padding: 10px;
+    }
+
+    .micarrito h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #contador-carrito {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .micarrito table {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .micarrito table th {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+
+    .micarrito table td {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+
+    .micarrito table img {
+        width: 50px !important;
+        height: auto;
+    }
+
+    .micarrito button.eliminar {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .carrito-total {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Celulares medianos (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .micarrito {
+        padding: 15px;
+    }
+
+    .micarrito h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #contador-carrito {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    .micarrito table {
+        font-size: 13px;
+        margin-top: 18px;
+    }
+
+    .micarrito table th {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .micarrito table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .micarrito table img {
+        width: 70px !important;
+        height: auto;
+    }
+
+    .micarrito button.eliminar {
+        padding: 7px 11px;
+        font-size: 11px;
+    }
+
+    .carrito-total {
+        padding: 18px 15px;
+        font-size: 15px;
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .micarrito {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .micarrito h2 {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    #contador-carrito {
+        font-size: 17px;
+        margin: 15px 0;
+    }
+
+    .micarrito table {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .micarrito table th {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .micarrito table td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .micarrito table img {
+        width: 80px !important;
+        height: auto;
+    }
+
+    .micarrito button.eliminar {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .carrito-total {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
+
+/* Desktop grande (1025px+) */
+@media (min-width: 1025px) {
+    .micarrito {
+        padding: 20px;
+        max-width: 1200px;
+    }
+
+    .micarrito h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #contador-carrito {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .micarrito table {
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .micarrito table th {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .micarrito table td {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .micarrito table img {
+        width: 100px !important;
+        height: auto;
+    }
+
+    .micarrito button.eliminar {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .carrito-total {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
